@@ -105,17 +105,13 @@ face in their microservices journey:
 | Microservices uses lightweight protocols such as **REST**, and **
 HTTP**, etc.  | SOA supports multi-message protocols.  |
 | It focuses on **decoupling**.  | It focuses on application service **reusability**.  |
-|  It uses a **simple messaging system** for communication. |  It uses **Enterprise Service Bus (
-ESB)** for communication. |
-|  Microservices follows "**share as little as possible**" architecture approach. |  SOA follows "**share as much as
-possible architecture**" approach |
-|  Microservices are much **better in fault
-tolerance** in comparison to SOA. | SOA is not better in fault tolerance in comparison to MSA.  |
+|  It uses a **simple messaging system** for communication. |  It uses **Enterprise Service Bus (ESB)** for communication. |
+|  Microservices follows "**share as little as possible**" architecture approach. |  SOA follows "**share as much as possible architecture**" approach |
+|  Microservices are much **better in faulttolerance** in comparison to SOA. | SOA is not better in fault tolerance in comparison to MSA.  |
 | Each microservice have an **independent database**. | SOA services share the whole data storage. |
 | MSA used modern relational databases.| SOA used traditional relational databases.|
 | MSA tries to minimize sharing through bounded context (the coupling of components and its data as a single unit with minimal dependencies)| SOA enhances component sharing.|
-| It is better suited for the **smaller and well portioned, web-based system**.| It is better for a **large and complex
-business application** environment.|
+| It is better suited for the **smaller and well portioned, web-based system**.| It is better for a **large and complex business application** environment.|
 
 ## Microservices Monitoring
 
