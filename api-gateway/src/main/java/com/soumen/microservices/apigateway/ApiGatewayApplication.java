@@ -1,7 +1,9 @@
 package com.soumen.microservices.apigateway;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,11 +17,11 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
-@FeignClient("car-service")
+@FeignClient("CARS-SERVICE")
 interface CarClient {
     @GetMapping("/cars")
     @CrossOrigin
@@ -39,6 +41,8 @@ public class ApiGatewayApplication {
 }
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 class Car {
     private String name;
 }
@@ -49,7 +53,7 @@ class CoolCarController {
     private final CarClient carClient;
 
     private Collection<Car> fallback() {
-        return new ArrayList<>();
+        return List.of(new Car("NOT FOUND"));
     }
 
     @GetMapping("/cool-cars")
