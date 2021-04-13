@@ -3,7 +3,7 @@
 # For Java 11, try this
 FROM adoptopenjdk/openjdk11:alpine-jre
 # Refer to Maven build -> finalName
-ARG JAR_FILE=target/spring-boot-web.jar
+ARG JAR_FILE=target/api-gateway-0.0.1-SNAPSHOT.jar
 # cd /opt/app
 WORKDIR /opt/app
 # cp target/spring-boot-web.jar /opt/app/app.jar
